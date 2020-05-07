@@ -1,3 +1,6 @@
+from glob import glob
+from random import choice
+
 def find_person(name):
     l = ['Jack', 'Maria', 'Sam', 'Den', 'Kelly', 'Peter']
     for el in l:
@@ -27,7 +30,9 @@ def ask_user(answers):
 def get_answer(question, answers):
     return answers.get(question, 'hmmm...')
 
-try:
-    ask_user(answers)
-except KeyboardInterrupt:
-    print("********** Sorry you leave **********")
+# try:
+#     ask_user(answers)
+# except KeyboardInterrupt:
+#     print("********** Sorry you leave **********"
+selected_list = glob('images/p*.jpg')
+print(choice(selected_list))
