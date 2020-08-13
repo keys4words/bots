@@ -6,16 +6,21 @@ bot = telebot.TeleBot(API_KEY)
 
 @bot.message_handler(func=lambda message: True)
 def echo(message):
-    if message.text == '/start':
-        bot.reply_to(message, 'Welcome to weather bot. Bot can supply with weather forecast for today and tomorrow')
-    elif 'hey' in message.text.lower():
-        bot.reply_to(message, 'Hey, pal!')
-    elif 'today' in message.text.lower():
+    m = message.text.lower()
+    if m == '/start':
+        bot.send_message(
+            message.chat.id,
+            'Welcome to weather bot. Bot can supply you with weather forecast for today and tomorrow',
+            # reply_to_message_id=message.message_id
+        )
+    elif any(word in m for word in ['hey', 'hello', 'hi']):
+        bot.reply_to(message, f'Hey, {message.from_user.first_name}!')
+    elif any(word in m for word in ['today', 'now', 'this day']):
         bot.reply_to(message, 'Weather for today')
-    elif 'tomorrow' in message.text.lower():
+    elif 'tomorrow' in m:
         bot.reply_to(message, 'Weather for tomorrow')
     else:
-        bot.reply_to(message, 'I dont understand')
+        bot.reply_to(message, "I don't understand")
 
 
 bot.polling()
