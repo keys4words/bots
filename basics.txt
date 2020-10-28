@@ -1,0 +1,31 @@
+types:
+A. info bot - cold audience
+B. sale bot - hot audience
+
+steps - A.
+1. base info
+2. catch contacts
+3. slice in db of contacts
+4. product's advantages - warming
+
+steps - B.
+4. see above
+5. sales
+6. upsales
+7. support
+
+
+functions:
+- segmentate persons by funnels
+- help with choicing
+- faq help
+- orders - creation, automation, tracking
+- support
+- help with search
+- tests & quizs & questioning & contests
+- signup & messaging
+
+main goals:
+- sales scaling
+- lead generation and segmentation
+- mailing and messaging
