@@ -8,6 +8,7 @@ __pycache__/
 
 # passwords and logins
 config.py
+**/*.ini
 
 # logs
 bot.log
